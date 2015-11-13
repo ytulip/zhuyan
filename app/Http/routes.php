@@ -12,5 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    echo Ytulip\Ycurl\YCurl::getCurl();
+    exit;
+//    return view('welcome');
 });
