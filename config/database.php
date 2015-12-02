@@ -1,4 +1,4 @@
-<?php
+  <?php
 
 return [
 
@@ -116,7 +116,7 @@ return [
         'cluster' => false,
 
         'default' => [
-            'host'     => '127.0.0.1',
+            'host'     => '120.24.99.52',
             'port'     => 6379,
             'database' => 0,
         ],

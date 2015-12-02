@@ -10,9 +10,5 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
-Route::get('/', function () {
-    echo Ytulip\Ycurl\YCurl::getCurl();
-    exit;
-//    return view('welcome');
-});
+Route::controller('/testredis','TestRedisController');
+Route::controller('/', 'IndexController');
