@@ -10,5 +10,6 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::controller('/testredis','TestRedisController');
+Route::controller('testredis','TestRedisController');
+Route::controller('wechat','WechatController');
 Route::controller('/', 'IndexController');

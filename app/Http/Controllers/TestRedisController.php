@@ -7,6 +7,7 @@ namespace App\Http\Controllers;
  */
 class TestRedisController extends Controller{
     public function getIndex(){
+        \WechatCallback::testFacade();
         echo 1;
         exit;
     }
