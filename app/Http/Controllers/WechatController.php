@@ -23,4 +23,13 @@ class WechatController extends Controller{
         BLogger::getLogger(BLogger::LOG_WECHAT)->info('--------endvisit--------');
         return Response($res);
     }
+
+    /**
+     * 设置微信菜单
+     */
+    public function getSetMenu(){
+        $response = \WechatCallback::setMenu();
+        return Response($response);
+    }
+
 }
