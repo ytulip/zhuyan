@@ -1,5 +1,7 @@
 <?php
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Redis;
+
 /**
  * 此类用来测试redis连接的
  * Class TestRedis
