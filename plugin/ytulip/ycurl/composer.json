@@ -1,0 +1,11 @@
+{
+    "name": "ytulip/ycurl",
+    "description": "the curl method",
+    "authors": [
+        {
+            "name": "YTulip",
+            "email": "ytulip.inc@gmail.com"
+        }
+    ],
+    "require": {}
+}
