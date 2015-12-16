@@ -23,6 +23,13 @@ class WechatTestController extends Controller{
     /**
      * 上传图片
      */
+    public function getUploadImg(){
+
+    }
+
+    /**
+     * 上传图片
+     */
     public function postUploadImg(){
 
     }
