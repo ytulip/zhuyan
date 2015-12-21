@@ -24,7 +24,14 @@ class WechatTestController extends Controller{
      * 上传图片
      */
     public function getUploadImg(){
+        return View('test.wechat_upload');
+    }
 
+    /**
+     * 获得分辨率
+     */
+    public function getResolution(){
+        return View('device');
     }
 
     /**

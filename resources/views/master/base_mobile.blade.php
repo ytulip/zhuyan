@@ -12,6 +12,7 @@
     <meta name="x5-fullscreen" content="true">
     <meta name="full-screen" content="yes">
     <meta name="browsermode" content="application">
+    <link href="/css/panel_style.css" rel="stylesheet"/>
     @section('css_link')
         @show
     <title>@yield('title','默认标题')</title>
@@ -95,14 +96,18 @@
         border-top:1px solid #c2c6c7;
     }
 </style>
+@section('style')
+    @show
 <body>
-<div class="app-container">
-    <div class="app-header">
+@section('body')
+    <div class="app-container">
+        <div class="app-header">
+        </div>
+        <div class="app-wrap">
+        </div>
+        <div class="app-footer">
+        </div>
     </div>
-    <div class="app-wrap">
-    </div>
-    <div class="app-footer">
-    </div>
-</div>
+    @show
 </body>
 </html>

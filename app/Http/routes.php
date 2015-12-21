@@ -12,4 +12,5 @@
 */
 Route::controller('testredis','TestRedisController');
 Route::controller('wechat','WechatController');
+Route::controller('testwechat','WechatTestController');
 Route::controller('/', 'IndexController');
