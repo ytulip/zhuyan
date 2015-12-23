@@ -17,10 +17,11 @@ $(function(){
                         wx.uploadImage({
                             localId: images.localId[0],
                             success: function(res){
-                                $.post('/api/wechat/pic-media',{media_id:res.serverId},function(data){
+                                $.post('/wechat/pic-media',{media_id:res.serverId},function(data){
                                     if(data.status){
                                         target.attr('data-status',1);
-                                        target.attr('src',data.data);
+                                        //target.attr('src',data.data);
+                                        $('#img-example').attr('src',data.data);
                                         var name = target.attr('input-name');
                                         if(name){
                                             $('input[name="'+name+'"]').val(data.data);

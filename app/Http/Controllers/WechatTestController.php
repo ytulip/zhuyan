@@ -24,8 +24,7 @@ class WechatTestController extends Controller{
      * 上传图片
      */
     public function getUploadImg(){
-        \WechatCallback::getSignPackage();
-        return View('test.wechat_upload');
+        return View('test.wechat_upload')->with('signPackage',\WechatCallback::getSignPackage());
     }
 
     /**

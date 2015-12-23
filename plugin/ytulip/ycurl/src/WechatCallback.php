@@ -121,4 +121,11 @@ class WechatCallback{
         $jssdk = new JSSDK($this->_appid,$this->_appsercret,$this->_token_path,$this->_ticket_path);
         return $jssdk->getSignPackage();
     }
+
+    /**
+     * @param $mediaId 媒体id
+     */
+    public function saveWeChatMedia($mediaId){
+
+    }
 }

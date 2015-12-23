@@ -2,9 +2,11 @@
 namespace App\Http\Controllers;
 
 use App\Services\BLogger;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Response;
+use Services\Image;
 
 class WechatController extends Controller{
     public function __construct(){
@@ -30,6 +32,20 @@ class WechatController extends Controller{
     public function getSetMenu(){
         $response = \WechatCallback::setMenu();
         return Response($response);
+    }
+
+    /**
+     * function: 从微信的服务端获取图片，返回一个本地服务器的图片url
+     */
+    public function anyPicMedia(){
+        $mediaId = Input::get('media_id');
+        $filename = Image::saveWeChatMedia($mediaId);
+        //TODO:判断文件是否存在
+        if(isset($filename['status'])){
+            return Response::json($filename);
+        }else {
+            return Response::json(array('status' => true, 'data' => $filename));
+        }
     }
 
 }

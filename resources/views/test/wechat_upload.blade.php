@@ -10,13 +10,13 @@
 @section('body')
     <div class="pure-black-panel">
         <div class="img-panel">
-            <img src="/image/example.jpg"/>
+            <img src="/image/example.jpg" id="img-example"/>
         </div>
         <div style="text-align: center">
            <div class="separate-line"></div>
         </div>
         <div class="opr-btn" style="margin-top: 40px">
-            <img src="/image/import_icon.png" style="width:60px;height: 60px;"/>
+            <img src="/image/import_icon.png" class="wechat-img-upload" style="width:60px;height: 60px;"/>
         </div>
     </div>
     @stop
@@ -39,5 +39,5 @@
                 'uploadImage']
         });
     </script>
-    <script src="/js/plugin/wechat_upload_img.js"></script>
+    <script src="/js/plugin/wechat_upload_img.js?version=1.1.1"></script>
     @stop
