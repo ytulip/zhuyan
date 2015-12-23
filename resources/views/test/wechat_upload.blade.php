@@ -20,3 +20,24 @@
         </div>
     </div>
     @stop
+
+@section('script')
+    @parent
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <script>
+        /*微信的配置*/
+        wx.config({
+            debug: false,
+            appId: '{{{$signPackage["appId"]}}}',
+            timestamp: '{{{$signPackage["timestamp"]}}}',
+            nonceStr: '{{{$signPackage["nonceStr"]}}}',
+            signature: '{{{$signPackage["signature"]}}}',
+            jsApiList: [
+                'checkJsApi',
+                'chooseImage',
+                'previewImage',
+                'uploadImage']
+        });
+    </script>
+    <script src="/js/plugin/wechat_upload_img.js"></script>
+    @stop

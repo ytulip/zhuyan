@@ -113,4 +113,12 @@ class WechatCallback{
     }
 
 
+    /**
+     * 这个js需要的东西
+     */
+    public function getSignPackage(){
+        self::check();
+        $jssdk = new JSSDK($this->_appid,$this->_appsercret,$this->_token_path,$this->_ticket_path);
+        return $jssdk->getSignPackage();
+    }
 }

@@ -21,7 +21,7 @@
         ],
         "psr-4": {
             "App\\": "app/",
-            "Ytulip\\Ycurl\\":"vendor/ytulip/ycurl/src"
+            "Ytulip\\Ycurl\\":"plugin/ytulip/ycurl/src"
         }
     },
     "autoload-dev": {

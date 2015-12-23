@@ -116,7 +116,6 @@ return [
         'cluster' => false,
 
         'default' => [
-            'host'     => '120.24.99.52',
             'port'     => 6379,
             'database' => 0,
         ],
