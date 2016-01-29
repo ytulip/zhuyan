@@ -30,14 +30,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Project name</a>
+            <a class="navbar-brand" href="#">开心保洁服务有限公司-后台管理</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Help</a></li>
+                <li><a href="#">统计</a></li>
+                <li><a href="#">录入</a></li>
+                <li><a href="#">员工</a></li>
+                <li><a href="#">设置</a></li>
             </ul>
             <form class="navbar-form navbar-right">
                 <input type="text" class="form-control" placeholder="Search...">
@@ -45,5 +45,31 @@
         </div>
     </div>
 </nav>
+<div style="padding-top: 100px">
+<table class="table">
+    <tr>
+        <td>我的眼前一片虚无</td>
+        <td>什么都看不到</td>
+        <td>这都是什么鬼</td>
+        <td>我擦</td>
+    </tr>
+</table>
+    </div>
+<style>
+    .icp-info span{color:#eeeeee}
+    footer .ego{overflow: hidden;margin-top: 12px;}
+    footer .ego .pic1{
+        width: 26px;
+        display: block;
+        float: left;
+        height: 26px;
+        background: url('/image/zhuyan_logo_26.png') no-repeat;
+        margin-right: 20px;
+    }
+</style>
+<footer style="background-color: #333333;padding:36px 12px;">
+    <div class="icp-info"><span>开心保洁</span><span>版权所有</span>&nbsp;&nbsp;<span>2015-{{date('Y')}}</span>&nbsp;&nbsp;<span>ICP证：蜀15014432号-1</span></div>
+    <div class="ego"><a class="pic1"></a></div>
+</footer>
 </body>
 </html>
