@@ -21,6 +21,14 @@
 <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="/bootstrap/js/bootstrap.min.js"></script>
+<style>
+    .sytipbox input{width:70%;font-size: 14px;margin-left:12px;}
+    .sytipbox ul{margin-left:12px;}
+
+    .sytipbox ul li a:hover {color:#B3BBC3;}
+    .sytipbox ul li{line-height: 22px; color: #667C6E; background: #C7DA76; padding: 0px 5px; float: left; height: 22px; border: 1px solid #B7C963; margin:0 10px 10px 0; border-radius:3px; cursor:default; display:inline; white-space: nowrap;}
+</style>
+<script src="/js/sytips.js"></script>
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -46,13 +54,27 @@
     </div>
 </nav>
 <div style="padding-top: 100px">
-<table class="table">
+<table class="table table-bordered" style="max-width: 640px">
+    <thead>
     <tr>
-        <td>我的眼前一片虚无</td>
-        <td>什么都看不到</td>
-        <td>这都是什么鬼</td>
-        <td>我擦</td>
+        <th>员工</th>
+        <th>客户姓名</th>
+        <th>应收金额</th>
+        <th>合计</th>
+        <th>合计X0.8</th>
+        <th>分摊</th>
     </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><div class="sytips" id="employee"></div></td>
+        <td><div class="sytips" id="customer"></div></td>
+        <td><div class="sytips" id="customer-cash"></div></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    </tbody>
 </table>
     </div>
 <style>
@@ -72,4 +94,46 @@
     <div class="ego"><a class="pic1"></a></div>
 </footer>
 </body>
+<script>
+    $(function(){
+        var onContentChangeEvent = function fill_auto()
+        {
+            console.log(1);
+//            var enames = $("#employee  li").length;//获取员工的长度
+//            var incomings = 0;
+//
+//            $("#customer-cash li").each(function ()
+//            {
+//                var cao = parseInt($(this).text().replace("×",""));
+//                incomings = incomings + cao;
+//            });
+//            var salary_deducted = incomings * 0.8;
+//            $("#salary-percent").text(salary_deducted);
+//            $("#salary-sum").text(incomings);
+//            if(enames == 0)
+//            {
+//                $("#salary-avg").text(salary_deducted);
+//            }else{
+//                var deducted = salary_deducted/enames;
+//                deducted =  deducted.toFixed(1);
+//                $("#salary-avg").text(deducted);
+//            }
+//            console.log(incomings);
+        };
+
+
+        $("#employee").sytips({
+            txt : '添加标签',
+            onContentChangeEvent : onContentChangeEvent
+        });
+        $("#customer").sytips({
+            txt : '添加标签',
+            onContentChangeEvent : onContentChangeEvent
+        });
+        $("#customer-cash").sytips({
+            txt : '添加标签',
+            onContentChangeEvent : onContentChangeEvent
+        });
+    });
+</script>
 </html>
