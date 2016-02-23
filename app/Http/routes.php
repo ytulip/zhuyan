@@ -15,4 +15,5 @@ Route::controller('wechat','WechatController');
 Route::controller('testwechat','WechatTestController');
 Route::controller('boot-strap','BootstrapController');
 Route::controller('ueditor','UEditorController');
+Route::controller('linlin','LinlinController');
 Route::controller('/', 'IndexController');
